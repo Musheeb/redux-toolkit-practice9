@@ -8,7 +8,9 @@ import {
 import { useState } from "react";
 
 export default function Counter() {
+  // Used to read value from redux state store.
   const count = useSelector((state) => state.counter.count);
+  // Used to send (actions) to the redux store to trigger state updations.
   const dispatch = useDispatch();
   const [userValue, setUserValue] = useState(0);
   const addedValue = Number(userValue) || 0;
